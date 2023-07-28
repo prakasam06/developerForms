@@ -13,7 +13,7 @@ function resizeRight(e) {
     parseInt(getComputedStyle(rightParent, "").width) + dx + "px";
 }
 
-var resizeElementright = document.getElementById("resize");
+var resizeElementright = document.getElementById("dragRight");
 resizeElementright.addEventListener(
   "mousedown",
   function (e) {
@@ -37,4 +37,3 @@ function barClicked() {
   bars.classList.toggle("active");
   nav.classList.toggle("visible");
 }
-//

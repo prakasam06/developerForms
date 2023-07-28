@@ -2,48 +2,102 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(42, 58, 58);
 }
 
-#center_panel {
-  background-color: rgb(230, 230, 237);
-  height: 70vh;
-  width: 60%;
-}
-
-#right_panel {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: rgb(42, 58, 58);
+#whole {
   height: 100vh;
-  width: 40%;
-}
-
-#resize {
-  background-color: #ccc;
-  position: absolute;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  cursor: w-resize;
-}
-
-#down_panel {
-  background-color: rgb(23, 60, 60);
-  height: 30vh;
-  width: 60%;
-}
-#resizeDown {
-  background-color: #ccc;
-  position: fixed;
-  top: 0;
   width: 100%;
-  height: 6px;
-  cursor: row-resize;
+  background-color: cornsilk;
+}
+
+#left {
+  width: 60%;
+  height: 100vh;
 }
 
 #pre {
-  height: 50vh;
+  margin-top: 2px;
+  margin-bottom: 0;
+  height: 60vh;
+  width: 100%;
   border-radius: 0px;
+}
+
+nav {
+  height: 6vh;
+  width: 100%;
+  margin-top: 0;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+header {
+  width: 100%;
+
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+ul {
+  height: 100%;
+}
+header {
+  justify-content: flex-start;
+}
+
+li {
+  justify-content: space-around;
+}
+#head {
+  margin: 0;
+  background-color: rgba(27, 31, 35, 0.994);
+  color: white;
+}
+
+#down {
+  margin-top: 2px;
+  background-color: rgba(27, 31, 35, 0.994);
+  height: 34vh;
+  width: 100%;
+}
+
+#whole {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+#right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  margin-left: 2px;
+  background-color: rgba(27, 31, 35, 0.994);
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+#dragRight {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 4px;
+  cursor: w-resize;
 }
