@@ -1,0 +1,22 @@
+{
+  "name": "devforms",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "dracula-prism": "^2.1.13",
+    "prismjs": "^1.29.0"
+  },
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
