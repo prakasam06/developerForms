@@ -1,9 +1,38 @@
 import Prism from "prismjs";
+const html = document.getElementById("leftSection");
+const codetag = document.getElementById("codetag");
 
-const code = `var data = 1;`;
+window.onload = () => {
+  const needed = htmlEntities(html.outerHTML);
+  codetag.innerHTML = needed;
+};
 
-// Returns a highlighted HTML string
-const html = Prism.highlight(code, Prism.languages.javascript, "javascript");
+function htmlEntities(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+// const code = `var data = 1;`;
+
+// // const loadJSON = document.getElementById("loadJSON");
+// // Returns a highlighted HTML string
+
+// const pre = document.getElementById("pre");
+// const codes = document.getElementById("prew");
+
+// loadJSON.addEventListener("click", () => {
+//   const highlightthis = pre.value;
+
+//   const html = Prism.highlight(
+//     highlightthis,
+//     Prism.languages.javascript,
+//     "javascript"
+//   );
+// });
+
 var m_pos;
 function resizeRight(e) {
   var rightParent = resizeElementright.parentNode;
@@ -13,7 +42,7 @@ function resizeRight(e) {
     parseInt(getComputedStyle(rightParent, "").width) + dx + "px";
 }
 
-var resizeElementright = document.getElementById("dragRight");
+var resizeElementright = document.getElementById("preview-button");
 resizeElementright.addEventListener(
   "mousedown",
   function (e) {
