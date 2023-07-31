@@ -101,33 +101,33 @@ function htmlEntities(str) {
 // };
 
 // const forms = [
-//   {
-//     pageno: 1,
-//     pageId: Date.now(),
-//     contents: {
-//       contentId: Date.now(),
-//       label: "name",
-//       labelid: Date.now(),
-//       inputType: "Text",
-//       inputId: Date.now(),
-//       id: "Date.now()",
-//       pageid: "page.pageId",
-//       bootstrapClasses: [
-//         {
-//           inputs: ["form-control"],
-//           labels: ["form-label"],
-//           thisDiv: ["card", "bg-dark"],
-//         },
-//       ],
-//       tailwindclasses: [
-//         {
-//           inputs: [],
-//           labels: [],
-//           thisDiv: [],
-//         },
-//       ],
-//     },
+// {
+//   pageno: 1,
+//   pageId: Date.now(),
+//   contents: {
+//     contentId: Date.now(),
+//     label: "name",
+//     labelid: Date.now(),
+//     inputType: "Text",
+//     inputId: Date.now(),
+//     id: "Date.now()",
+//     pageid: "page.pageId",
+//     bootstrapClasses: [
+//       {
+//         inputs: ["form-control"],
+//         labels: ["form-label"],
+//         thisDiv: ["card", "bg-dark"],
+//       },
+//     ],
+//     tailwindclasses: [
+//       {
+//         inputs: [],
+//         labels: [],
+//         thisDiv: [],
+//       },
+//     ],
 //   },
+// },
 // ];
 
 const convert = document.getElementById("JSONtohtml");
@@ -143,18 +143,18 @@ convert.addEventListener("click", () => {
     const section = document.createElement("div");
     page1.appendChild(section);
     section.classList.add("container");
+    console.log(form.contents);
 
     form.contents.forEach((content) => {
+      console.log("hey");
       const thisdiv = document.createElement("div");
       section.appendChild(thisdiv);
       const label = document.createElement("label");
       label.innerHTML = content.label;
       const input = document.createElement("input");
       input.type = content.inputType;
-
       thisdiv.appendChild(label);
       thisdiv.appendChild(input);
-
       content.bootstrapClasses.forEach((bootstrap) => {
         console.log(bootstrap.inputs);
         bootstrap.inputs.forEach((style) => {
@@ -173,3 +173,35 @@ convert.addEventListener("click", () => {
     codetag.innerHTML = html;
   });
 });
+
+// [
+//   {
+//     "pageno": 1,
+//     "pageId": 1669611614491,
+//     "contents": [
+//       {
+//         "contentId": 1669611614491,
+//         "label": "name",
+//         "labelid": 1669611614491,
+//         "inputType": "Text",
+//         "inputId": 1669611614491,
+//         "id": 1669611614491,
+//         "pageid": "page.pageId",
+//         "bootstrapClasses": [
+//           {
+//             "inputs": ["form-control"],
+//             "labels": ["form-label"],
+//             "thisDiv": ["card", "bg-primary"]
+//           }
+//         ],
+//         "tailwindclasses": [
+//           {
+//             "inputs": [],
+//             "labels": [],
+//             "thisDiv": []
+//           }
+//         ]
+//       }
+//     ]
+//   }
+//   ]
