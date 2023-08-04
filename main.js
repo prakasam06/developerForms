@@ -3,6 +3,8 @@ import Prism from "prismjs";
 const codetag = document.getElementById("codetag");
 const jsonInp = document.getElementById("JSONinp");
 const page1 = document.getElementById("page1");
+const getCode = document.getElementById("textarea");
+const codeTag = document.getElementById("getCode");
 
 // window.onload = () => {
 //   const needed = htmlEntities(html.outerHTML);
@@ -205,3 +207,16 @@ convert.addEventListener("click", () => {
 //     ]
 //   }
 //   ]
+
+getCode.oninput = () => {
+  // if (getCode.value[getCode.value.length - 1] == "\n") {
+  //   getCode.value += " ";
+  // }
+  const html = Prism.highlight(
+    getCode.value,
+    Prism.languages.javascript,
+    "javascript"
+  );
+  console.log(getCode.value);
+  codeTag.innerHTML = html;
+};

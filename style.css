@@ -24,17 +24,6 @@ ul {
   justify-content: space-around;
 }
 
-textarea {
-  width: 60%;
-  overflow-y: scroll;
-  padding: 5vh;
-  background-color: #282a36;
-  font-size: 18px;
-  color: rgb(250, 250, 250);
-  resize: none;
-  height: 57vh;
-}
-
 #leftSection {
   display: flex;
   height: 94vh;
@@ -115,12 +104,77 @@ img {
   width: 20%;
 }
 
-/* #textareas {
-  display: flex;
-  width: 100%;
-} */
-
 #page1 {
   height: 100vh;
   width: 100%;
+}
+
+/* #up {
+  width: 100%;
+  overflow-y: scroll;
+  font-size: 20px;
+  background-color: #282a36;
+  margin: 9px;
+  padding-left: 6px;
+  height: 57vh;
+}
+
+#textarea {
+  color: transparent;
+  background: transparent;
+  caret-color: white;
+  position: absolute;
+  top: 5;
+  left: 17px;
+  width: 40%;
+  border: none;
+  padding-left: 5px;
+  font-size: 20px;
+  padding-top: 2vh;
+  font-size: 20px;
+  resize: none;
+  height: 57vh;
+
+  padding-top: 30px;
+} */
+
+#container {
+  position: relative;
+  border: solid white 2px;
+  height: 57vh;
+  width: 100%;
+  font-size: 20px !important;
+  margin-top: -2px !important;
+}
+
+#up {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  padding: 0;
+  font-size: 22px !important;
+  margin-top: 0px !important;
+}
+
+#textarea {
+  top: 0;
+  left: 0;
+  background: transparent;
+  position: absolute;
+  height: 100%;
+  resize: none;
+  color: transparent;
+  caret-color: white;
+  width: 100%;
+  z-index: 1;
+  font-size: 20px !important;
+  margin-top: -4px !important;
+}
+
+#getCode {
+  padding-left: 2px;
 }
