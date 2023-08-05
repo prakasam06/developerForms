@@ -3,8 +3,8 @@ import Prism from "prismjs";
 const codetag = document.getElementById("codetag");
 const jsonInp = document.getElementById("JSONinp");
 const page1 = document.getElementById("page1");
-const getCode = document.getElementById("textarea");
-const codeTag = document.getElementById("getCode");
+const getCode = document.getElementById("editing");
+const codeTag = document.getElementById("highlighting");
 
 // window.onload = () => {
 //   const needed = htmlEntities(html.outerHTML);
@@ -218,5 +218,6 @@ getCode.oninput = () => {
     "javascript"
   );
   console.log(getCode.value);
+  console.log(html);
   codeTag.innerHTML = html;
 };

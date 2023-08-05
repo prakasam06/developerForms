@@ -15,7 +15,13 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
+    <script>
+      function sync_scroll(element) {
+        let result_element = document.querySelector("#highlighting");
+        result_element.scrollTop = element.scrollTop;
+        result_element.scrollLeft = element.scrollLeft;
+      }
+    </script>
     <title>devForms</title>
   </head>
   <body>
@@ -34,12 +40,15 @@
       <section id="leftSection">
         <div id="setLeft">
           <div id="container">
-            <textarea id="textarea" spellcheck="false"></textarea>
-            <pre id="up" aria-hidden="true">
-<code class="language-javascript" id="getCode"></code>
-</pre>
+            <textarea
+              id="editing"
+              onscroll="sync_scroll(this);"
+              spellcheck="false"
+            ></textarea>
+            <pre id="preTag" aria-hidden="true">
+              <code class="language-javascript" id="highlighting"></code>
+            </pre>
           </div>
-
           <div id="options"><button id="JSONtohtml">convert</button></div>
           <pre
             id="down"
@@ -54,6 +63,6 @@
         <div id="page1"></div>
       </section>
     </div>
+    <script type="module" src="./main.js"></script>
   </body>
-  <script type="module" src="./main.js"></script>
 </html>
