@@ -54,6 +54,7 @@ h3 {
 }
 
 #preview {
+  z-index: 999;
   height: 100vh;
   background-color: aliceblue;
   width: 3%;

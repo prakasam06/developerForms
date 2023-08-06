@@ -170,3 +170,128 @@ const forms = [
     },
   },
 ];
+
+//
+[
+  {
+    pageno: 1,
+    pageId: "",
+    contents: [
+      {
+        contentId: "",
+        label: "name",
+        labelid: "",
+        inputType: "Text",
+        inputId: "",
+        id: "",
+        pageid: "",
+        bootstrapClasses: [
+          {
+            inputs: ["form-control"],
+            labels: ["form-label"],
+            thisDiv: ["card", "bg-dark"],
+          },
+        ],
+        tailwindclasses: [
+          {
+            inputs: [],
+            labels: [],
+            thisDiv: [],
+          },
+        ],
+      },
+      {
+        pageno: 1,
+        pageId: "",
+        contents: {
+          contentId: "",
+          label: "name",
+          labelid: "",
+          inputType: "Text",
+          inputId: "",
+          id: "",
+          pageid: "",
+          bootstrapClasses: [
+            {
+              inputs: ["form-control"],
+              labels: ["form-label"],
+              thisDiv: ["card", "bg-dark"],
+            },
+          ],
+          tailwindclasses: [
+            {
+              inputs: [],
+              labels: [],
+              thisDiv: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
+];
+
+//
+
+// json
+
+[
+  {
+    pageno: 1,
+    pageId: "",
+    contents: [
+      {
+        contentId: "",
+        label: "age",
+        labelid: "",
+        inputType: "Text",
+        inputId: "",
+        id: "",
+        pageid: "",
+        bootstrapClasses: [
+          {
+            inputs: ["form-control"],
+            labels: ["form-label"],
+            thisDiv: ["card", "bg-dark"],
+          },
+        ],
+        tailwindclasses: [
+          {
+            inputs: [],
+            labels: [],
+            thisDiv: [],
+          },
+        ],
+      },
+      {
+        pageno: 1,
+        pageId: "",
+        contents: {
+          contentId: "",
+          label: "name",
+          labelid: "",
+          inputType: "Text",
+          inputId: "",
+          id: "",
+          pageid: "",
+          bootstrapClasses: [
+            {
+              inputs: ["form-control"],
+              labels: ["form-label"],
+              thisDiv: ["card", "bg-dark"],
+            },
+          ],
+          tailwindclasses: [
+            {
+              inputs: [],
+              labels: [],
+              thisDiv: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
+];
+
+//

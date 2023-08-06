@@ -1,11 +1,11 @@
 import Prism from "prismjs";
 
 const codetag = document.getElementById("codetag");
-const jsonInp = document.getElementById("JSONinp");
+
 const page1 = document.getElementById("page1");
 const getCode = document.getElementById("editing");
 const codeTag = document.getElementById("highlighting");
-
+const convert = document.getElementById("JSONtohtml");
 // window.onload = () => {
 //   const needed = htmlEntities(html.outerHTML);
 //   codetag.innerHTML = needed;
@@ -132,10 +132,8 @@ function htmlEntities(str) {
 // },
 // ];
 
-const convert = document.getElementById("JSONtohtml");
-
 convert.addEventListener("click", () => {
-  const JSONobj = jsonInp.value;
+  const JSONobj = getCode.value;
   const jsonObjectOrArray = JSON.parse(JSONobj);
   console.log(jsonObjectOrArray);
   const forms = [...jsonObjectOrArray];
@@ -157,6 +155,7 @@ convert.addEventListener("click", () => {
       input.type = content.inputType;
       thisdiv.appendChild(label);
       thisdiv.appendChild(input);
+      console.log(content.bootstrapClasses);
       content.bootstrapClasses.forEach((bootstrap) => {
         console.log(bootstrap.inputs);
         bootstrap.inputs.forEach((style) => {
