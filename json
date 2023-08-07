@@ -179,3 +179,39 @@
   }
 ]
     //
+
+     <div id="flex">
+      <section id="leftSection">
+        <div id="setLeft">
+          <nav>
+            <header>
+              <!-- <img src="./chef2.jpg" /> -->
+              <h1>Cook Your Forms</h1>
+            </header>
+            <ul>
+              <li>hi</li>
+              <li>ui</li>
+              <li>home</li>
+            </ul>
+          </nav>
+          <div id="container">
+            <textarea
+              id="editing"
+              onscroll="sync_scroll(this);"
+              spellcheck="false"
+            ></textarea>
+            <pre id="preTag" aria-hidden="true">
+              <code class="language-javascript" id="highlighting"></code>
+            </pre>
+          </div>
+          <div id="options"><button id="JSONtohtml">convert</button></div>
+          <pre
+            id="down"
+          ><code class="language-html match-braces" id="codetag"></code></pre>
+        </div>
+      </section>
+      <section id="preview">
+        <div id="preview-button"></div>
+        <div id="page1"></div>
+      </section>
+    </div>

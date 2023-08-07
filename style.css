@@ -2,174 +2,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
   font-family: "Poppins", sans-serif;
 }
-
-nav {
-  color: white;
-  background-color: rgb(57, 5, 43);
-  height: 6vh;
-  width: 100%;
+:root {
+  --navHeight: 4rem;
+}
+.navbar {
+  width: 100vw;
+  height: 4rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  z-index: 0;
+  background-color: rgb(235, 234, 234);
 }
-
-ul {
+.heading {
+  margin-left: 5rem;
+  font-size: 40px;
+}
+.navLinks {
   width: 40%;
+  height: var(--navHeight);
   display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#leftSection {
-  display: flex;
-  height: 94vh;
-  width: 100%;
-  background-color: #282a36;
-}
-
-#setLeft {
-  display: grid;
-  width: 70%;
-}
-
-#down {
-  height: 27vh;
-  border: solid white 2px;
-}
-
-h3 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#setRight {
-  width: 30%;
-  border: solid white 2px;
-}
-
-#preview {
-  z-index: 999;
-  height: 100vh;
-  background-color: aliceblue;
-  width: 3%;
-  min-width: 2%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: flex;
-}
-
-#preview-button {
-  justify-content: flex-start;
-  height: 100vh;
-  min-width: 7px;
-  background-color: cornflowerblue;
-  cursor: w-resize;
-}
-
-#options {
-  width: 100%;
-  height: 6vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#JSONtohtml {
-  color: #282a36;
-  padding: 7px;
-  border: none;
-  border-radius: 3px;
-  background-color: burlywood;
-}
-
-#JSONtohtml:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(47, 5, 5);
-}
-
-header {
-  height: 6vh;
-  width: 30%;
-  display: flex;
-  align-items: center;
-}
-img {
-  height: 6vh;
-  width: 20%;
-}
-
-#page1 {
-  height: 100vh;
-  width: 100%;
-}
-#container {
-  position: relative;
-  height: 57vh;
-  width: 100%;
-  outline: 1px solid white;
-}
-
-/* #textarea {
-  position: absolute;
-  background: transparent;
-  caret-color: white;
-  outline: none;
-  border: none;
-  height: 100%;
-  width: 100%;
-  resize: none;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  padding: 1rem;
-  color: transparent;
-}
-
-code,
-pre {
-  position: absolute;
-
-  outline: none;
-  border: none;
-  resize: none;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  outline: 1px solid white;
   margin: 0 !important;
-  border-radius: 0 !important;
-  width: 100%;
-  height: 100%;
-  z-index: -999;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
 }
-#codetag {
-  background: transparent;
-} */
+
+.application {
+  height: calc(100vh - var(--navHeight));
+  width: 100%;
+  display: flex;
+}
+
+.leftSection {
+  background-color: rgb(235, 234, 234);
+  width: 70vw;
+  height: calc(100vh - var(--navHeight));
+}
+
+.preview {
+  position: relative;
+  background-color: rgb(229, 209, 209);
+  width: 30vw;
+  height: calc(100vh - var(--navHeight));
+}
+.container {
+  height: 45rem;
+  width: 100%;
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 #editing,
 #highlighting {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 10px;
-  padding: 10px;
+  /* Both elements need the same text and space styling so they are directly on top of each other */
+  width: 100%;
+
   border: 0;
-  width: calc(100% - 32px);
-  height: 150px;
-  overflow: auto;
-  white-space: pre-wrap;
+
+  height: 45rem;
 }
 
 #editing,
 #highlighting,
 #highlighting * {
+  /* Also add text styles to highlighting tokens */
   font-size: 15pt;
   font-family: monospace;
   line-height: 20pt;
@@ -183,26 +83,31 @@ pre {
 }
 
 #editing {
-  width: 100% !important;
-  height: 100% !important;
-  resize: none !important;
-  outline: none;
-  border: none;
   z-index: 1;
+  resize: none;
 }
 
 #highlighting {
   z-index: 0;
-  height: 100%;
 }
 
 #editing {
   color: transparent;
   background: transparent;
-  caret-color: white;
+  caret-color: white; /* Or choose your favorite color */
 }
 
 pre {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.preview-button {
+  position: absolute;
+  left: 0;
+  height: calc(100vh - var(--navHeight));
+  width: 0.3rem;
+  background-color: black;
 }
