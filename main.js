@@ -64,6 +64,28 @@ convertJSON.addEventListener("click", () => {
   const JSONobj = JSON.parse(getCode.value);
   const forms = [...JSONobj];
   console.log(forms);
-
-  forms.forEach((page) => {});
+  deleteChilds(previewArea);
+  forms.forEach((page) => {
+    const container = document.createElement(page.tagName);
+    previewArea.appendChild(container);
+    page.children.forEach((child) => {
+      const elementsContainer = document.createElement(child.tagName);
+      child.children.forEach((childd) => {
+        const element = document.createElement(childd.tagName);
+        if (childd.tagName == "label") {
+          element.innerHTML = childd.content;
+        } else if (childd.tagName == "input") {
+          element.type = childd.type;
+        }
+        elementsContainer.appendChild(element);
+      });
+      container.appendChild(elementsContainer);
+    });
+  });
 });
+
+function deleteChilds(divName) {
+  while (divName.hasChildNodes()) {
+    divName.removeChild(divName.children[0]);
+  }
+}

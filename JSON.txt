@@ -1,4 +1,4 @@
-const forms = [
+[
 {
   "pageNumber": 1,
   "pageID": "fd2",
@@ -7,8 +7,8 @@ const forms = [
     "label": "hfjdifjd dfdfgihfiow jhsjifhb",
     "input": "hfjdifjd dfdfgihfiow jhsjifhb"
   },
-  "container": "div",
-  "containerclasses": "",
+  "tagName": "section",
+  "classes": "",
   "children": [
     {
       "tagName": "div",
@@ -61,7 +61,7 @@ const forms = [
     "label": "hfjdifjd dfdfgihfiow jhsjifhb",
     "input": "hfjdifjd dfdfgihfiow jhsjifhb"
   },
-  "tagName": "div",
+  "tagName": "section",
   "class": "",
   "children": [
     {
