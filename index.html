@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
     />
-
+    <script type="module" src="./main.js"></script>
     <script>
       function sync_scroll(element) {
         let result_element = document.querySelector("#highlighting");
@@ -17,12 +17,46 @@
         result_element.scrollLeft = element.scrollLeft;
       }
     </script>
+    <script>
+      function check_tab(element, event) {
+        let code = element.value;
+        if (event.key == "Tab") {
+          event.preventDefault();
+          let before_tab = code.slice(0, element.selectionStart);
+          let after_tab = code.slice(
+            element.selectionEnd,
+            element.value.length
+          );
+          let cursor_pos = element.selectionEnd + 1;
+          element.value = before_tab + "\t" + after_tab;
+
+          element.selectionStart = cursor_pos;
+          element.selectionEnd = cursor_pos;
+          update(element.value);
+        }
+      }
+
+      function update(text) {
+        const highlighter = document.getElementById("highlighting");
+        if (text[text.length - 1] == "\n") {
+          text += " ";
+        }
+
+        const html = Prism.highlight(
+          text,
+          Prism.languages.javascript,
+          "javascript"
+        );
+        highlighter.innerHTML = html;
+      }
+    </script>
     <title>devForms</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar">
-        <div class="heading">cook</div>
+        <div class="heading">FORMS</div>
         <ul class="navLinks">
           <li>home</li>
           <li>house</li>
@@ -31,28 +65,30 @@
       </nav>
     </header>
     <section class="application">
-      <section class="leftSection">
+      <section class="leftSection" id="leftsection">
         <div class="container">
           <textarea
             id="editing"
+            spellcheck="false"
             oninput="update(this.value); sync_scroll(this);"
             onscroll="sync_scroll(this);"
+            onkeydown="check_tab(this, event);"
           ></textarea>
 
           <pre id="highlighting" aria-hidden="true">
-  <code class="language-html" id="highlighting-content"></code>
+  <code class="language-javascript" id="highlighting-content"></code>
 </pre>
         </div>
         <div class="toolbar">
-          <div class="pulltoolbar"></div>
+          <button id="convert" class="convert">COOK</button>
         </div>
       </section>
 
-      <section class="preview">
-        <div class="preview-button"></div>
+      <section class="preview" id="preview">
+        <div class="preview-button" id="preview-button"></div>
+        <div id="previewArea"></div>
         <div class=""></div>
       </section>
     </section>
-    <script type="module" src="./main.js"></script>
   </body>
 </html>

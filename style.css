@@ -6,6 +6,7 @@
 }
 :root {
   --navHeight: 4rem;
+  --useable: calc(100vh - var(--navHeight));
 }
 .navbar {
   width: 100vw;
@@ -14,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   z-index: 0;
-  background-color: rgb(235, 234, 234);
+  background-color: rgb(245, 230, 230);
 }
 .heading {
   margin-left: 5rem;
@@ -29,6 +30,9 @@
   justify-content: space-around;
   list-style: none;
 }
+li {
+  cursor: pointer;
+}
 
 .application {
   height: calc(100vh - var(--navHeight));
@@ -39,15 +43,24 @@
 .leftSection {
   background-color: rgb(235, 234, 234);
   width: 70vw;
+  max-width: 70vw;
+  min-width: 10vw;
   height: calc(100vh - var(--navHeight));
+  z-index: 0;
 }
 
 .preview {
-  position: relative;
-  background-color: rgb(229, 209, 209);
-  width: 30vw;
+  display: flex;
+  position: absolute;
+  width: 30vh;
+  max-width: 90vw;
+  min-width: 30vw;
+  padding-left: 4px;
   height: calc(100vh - var(--navHeight));
+  right: 0;
+  background-color: rgb(229, 209, 209);
 }
+
 .container {
   height: 45rem;
   width: 100%;
@@ -70,9 +83,10 @@
 #highlighting,
 #highlighting * {
   /* Also add text styles to highlighting tokens */
-  font-size: 15pt;
+  font-size: 13pt;
   font-family: monospace;
-  line-height: 20pt;
+  line-height: 19pt;
+  tab-size: 2;
 }
 
 #editing,
@@ -105,9 +119,59 @@ pre {
 }
 
 .preview-button {
+  background-color: rgb(230, 142, 142);
   position: absolute;
   left: 0;
+  width: 0.2rem;
   height: calc(100vh - var(--navHeight));
-  width: 0.3rem;
-  background-color: black;
+  cursor: w-resize;
+}
+
+.toolbar {
+  height: calc(var(--useable) - 45rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* CSS */
+.convert {
+  align-self: center;
+  background-color: #ddd87c;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: 0.75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.convert:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.convert:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
