@@ -60,27 +60,46 @@ getCode.oninput = () => {
   codeTag.innerHTML = html;
 };
 
+let container;
+let tag = 0;
+
+const createPage = (object) => {
+  for (var key of Object.keys(object)) {
+    if (key == "container") {
+      console.log("hey");
+      container = document.createElement(object[key]);
+      container.classList.add("hui");
+      previewArea.appendChild(container);
+    }
+    if (key == "tagName") {
+      // console.log("hi from tag");
+      tag = document.createElement(object[key]);
+      console.log(tag, "hy tag");
+      // console.log(container, "hi from container");
+      container.appendChild(tag);
+    }
+    if (key == "content") {
+      tag.innerHTML = object[key];
+      console.log(tag, "prakasam");
+    }
+    if (key == "children") {
+      object[key].forEach((k) => {
+        createPage(k);
+      });
+    } else {
+      // console.log("poda");
+    }
+  }
+};
+
 convertJSON.addEventListener("click", () => {
   const JSONobj = JSON.parse(getCode.value);
   const forms = [...JSONobj];
   console.log(forms);
   deleteChilds(previewArea);
-  forms.forEach((page) => {
-    const container = document.createElement(page.tagName);
-    previewArea.appendChild(container);
-    page.children.forEach((child) => {
-      const elementsContainer = document.createElement(child.tagName);
-      child.children.forEach((childd) => {
-        const element = document.createElement(childd.tagName);
-        if (childd.tagName == "label") {
-          element.innerHTML = childd.content;
-        } else if (childd.tagName == "input") {
-          element.type = childd.type;
-        }
-        elementsContainer.appendChild(element);
-      });
-      container.appendChild(elementsContainer);
-    });
+
+  forms.forEach((form) => {
+    createPage(form);
   });
 });
 
@@ -89,3 +108,23 @@ function deleteChilds(divName) {
     divName.removeChild(divName.children[0]);
   }
 }
+
+function createElement(tagName) {
+  const element = document.createElement(tagName);
+  previewArea.appendChild(element);
+}
+
+function addContent() {
+  element.innerHTML = key;
+}
+
+//     if (Object.hasOwn(object, "content")) {
+//       element.innerHTML = object.content;
+//     }
+//   }
+//   if (key == "children") {
+//     object[key].forEach((k) => {
+//       createPage(k);
+//     });
+//   }
+// }
