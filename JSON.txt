@@ -126,3 +126,495 @@
   ]
 }
 ]
+
+ if (key == "container") {
+      console.log("hey");
+      container = document.createElement(object[key]);
+      container.classList.add("hui");
+      previewArea.appendChild(container);
+    }
+    if (key == "tagName") {
+      // console.log("hi from tag");
+      tag = document.createElement(object[key]);
+      console.log(tag, "hy tag");
+      // console.log(container, "hi from container");
+      container.appendChild(tag);
+    }
+    if (key == "content") {
+      tag.innerHTML = object[key];
+      console.log(tag, "prakasam");
+    }
+    if (key == "children") {
+      object[key].forEach((k) => {
+        createPage(k);
+      });
+    } else {
+      // console.log("poda");
+    }
+
+
+[
+{
+  "pageNumber": 1,
+  "pageID": "fd2",
+  "defaultClass": {
+    "div": "dfdfgihfiow jhsjifhb jfjwnfij",
+    "label": "hfjdifjd dfdfgihfiow jhsjifhb",
+    "input": "hfjdifjd dfdfgihfiow jhsjifhb"
+  },
+  "container": "div",
+	"content": "hey",
+	"id":"contains",
+  "classes": "",
+  "children": [
+    {
+      "tagName": "div",
+      "class": "parsakskd",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "text",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "number",
+ "placeholder":"hello",
+ "autocomplete":"off"
+        }
+      ]
+    }
+  ]
+}
+][
+{
+  "pageNumber": 1,
+  "pageID": "fd2",
+  "defaultClass": {
+    "div": "dfdfgihfiow jhsjifhb jfjwnfij",
+    "label": "hfjdifjd dfdfgihfiow jhsjifhb",
+    "input": "hfjdifjd dfdfgihfiow jhsjifhb"
+  },
+  "container": "div",
+	"content": "hey",
+	"id":"contains",
+  "classes": "",
+  "children": [
+    {
+      "tagName": "div",
+      "class": "parsakskd",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "text",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "number",
+ "placeholder":"hello",
+ "autocomplete":"off"
+        }
+      ]
+    }
+  ]
+}
+][
+{
+  "pageNumber": 1,
+  "pageID": "fd2",
+  "defaultClass": {
+    "div": "dfdfgihfiow jhsjifhb jfjwnfij",
+    "label": "hfjdifjd dfdfgihfiow jhsjifhb",
+    "input": "hfjdifjd dfdfgihfiow jhsjifhb"
+  },
+  "container": "div",
+	"content": "hey",
+	"id":"contains",
+  "classes": "",
+  "children": [
+    {
+      "tagName": "div",
+      "class": "parsakskd",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "text",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "number",
+ "placeholder":"hello",
+ "autocomplete":"off"
+        }
+      ]
+    }
+  ]
+}
+]
+
+
+
+
+
+
+//
+
+[
+{
+  "pageNumber": 1,
+  "pageID": "fd2",
+  "defaultClass": {
+    "div": "dfdfgihfiow jhsjifhb jfjwnfij",
+    "label": "hfjdifjd dfdfgihfiow jhsjifhb",
+    "input": "hfjdifjd dfdfgihfiow jhsjifhb"
+  },
+  "container": "div",
+	"content": "hey",
+	"id":"contains",
+  "classes": "",
+  "children": [
+    {
+      "tagName": "div",
+      "class": "parsakskd",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "text",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "img",
+          "src": "https://imgs.search.brave.com/3JO5kjKFLdFiD8ERht0IhpqBwIS2qdkXJ1OMyiyVt2Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI5/NzQ1MTY4NC9waG90/by9wdXBweS1wbGF5/aW5nLXR1Zy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9LTY3/bDZhcW02LUVjMHQt/dzZtS19VLUJELTFa/SHcyWW5qdkxHeTFs/Rzl5Zz0"
+        }
+      ]
+    },
+    {
+      "tagName": "div",
+      "children": [
+        {
+          "tagName": "label",
+          "content": "Name"
+        },
+        {
+          "tagName": "input",
+          "type": "number",
+ "placeholder":"hello",
+ "autocomplete":"off"
+        }
+      ]
+    }
+  ]
+}
+]
+
+
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

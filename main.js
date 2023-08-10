@@ -60,36 +60,58 @@ getCode.oninput = () => {
   codeTag.innerHTML = html;
 };
 
-let container;
-let tag = 0;
-
-const createPage = (object) => {
-  for (var key of Object.keys(object)) {
+const createPage = (obj) => {
+  for (var key of Object.keys(obj)) {
+    console.log(obj[key]);
     if (key == "container") {
-      console.log("hey");
-      container = document.createElement(object[key]);
-      container.classList.add("hui");
-      previewArea.appendChild(container);
+      var parentContainer = document.createElement(obj[key]);
+      console.log(parentContainer);
+      parentContainer.setAttribute("id", "parentContainer");
+      previewArea.appendChild(parentContainer);
     }
     if (key == "tagName") {
-      // console.log("hi from tag");
-      tag = document.createElement(object[key]);
-      console.log(tag, "hy tag");
-      // console.log(container, "hi from container");
-      container.appendChild(tag);
-    }
-    if (key == "content") {
-      tag.innerHTML = object[key];
-      console.log(tag, "prakasam");
+      var element = document.createElement(obj[key]);
+      console.log(element);
+      childContainer.appendChild(element);
     }
     if (key == "children") {
-      object[key].forEach((k) => {
-        createPage(k);
-      });
-    } else {
-      // console.log("poda");
+      createChildren(obj[key]);
     }
   }
+};
+
+const createChildren = (obj) => {
+  obj.forEach((object) => {
+    for (var key of Object.keys(object)) {
+      if (key == "tagName") {
+        var childContainer = document.createElement(object[key]);
+        childContainer.setAttribute("id", "childContainer");
+        parentContainer.appendChild(childContainer);
+      }
+      if (key == "children") {
+        object[key].forEach((child) => {
+          for (var key of Object.keys(child)) {
+            if (key == "tagName") {
+              console.log(child[key]);
+              var element = document.createElement(child[key]);
+              childContainer.appendChild(element);
+            }
+            if (key == "content") {
+              element.innerHTML = child[key];
+            }
+            if (key == "children") {
+              child[key].forEach((child) => {
+                console.log(child);
+                createPage(child);
+              });
+            } else {
+              element.setAttribute(key, child[key]);
+            }
+          }
+        });
+      }
+    }
+  });
 };
 
 convertJSON.addEventListener("click", () => {
@@ -128,3 +150,7 @@ function addContent() {
 //     });
 //   }
 // }
+
+const create = (o) => {
+  console.log(o);
+};
