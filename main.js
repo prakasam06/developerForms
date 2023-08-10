@@ -60,7 +60,7 @@ getCode.oninput = () => {
   codeTag.innerHTML = html;
 };
 
-const createPage = (obj) => {
+const createPage = (obj, id) => {
   for (var key of Object.keys(obj)) {
     console.log(obj[key]);
     if (key == "container") {
@@ -71,22 +71,37 @@ const createPage = (obj) => {
     }
     if (key == "tagName") {
       var element = document.createElement(obj[key]);
-      console.log(element);
-      childContainer.appendChild(element);
+      element.setAttribute("id", `${obj[key] + key}`);
+      console.log(element.id);
+      const data = id;
+      console.log(data);
+      const contain = document.getElementById(data);
+      console.log(contain);
+      contain.appendChild(element);
+
+      if (obj.hasOwnProperty("content")) {
+        element.innerHTML = obj.content;
+      }
     }
+
     if (key == "children") {
-      createChildren(obj[key]);
+      createChildren(obj[key], id);
     }
   }
 };
 
-const createChildren = (obj) => {
+const createChildren = (obj, id) => {
   obj.forEach((object) => {
+    console.log(id);
     for (var key of Object.keys(object)) {
       if (key == "tagName") {
         var childContainer = document.createElement(object[key]);
         childContainer.setAttribute("id", "childContainer");
+        // childContainer.setAttribute("id", Date.now());
         parentContainer.appendChild(childContainer);
+      }
+      if (key == "content") {
+        childContainer.innerHTML = child[key];
       }
       if (key == "children") {
         object[key].forEach((child) => {
@@ -94,7 +109,9 @@ const createChildren = (obj) => {
             if (key == "tagName") {
               console.log(child[key]);
               var element = document.createElement(child[key]);
+
               childContainer.appendChild(element);
+              element.setAttribute("id", `${Date.now() + child[key]}`);
             }
             if (key == "content") {
               element.innerHTML = child[key];
@@ -102,7 +119,8 @@ const createChildren = (obj) => {
             if (key == "children") {
               child[key].forEach((child) => {
                 console.log(child);
-                createPage(child);
+                console.log(element.id);
+                createPage(child, element.id);
               });
             } else {
               element.setAttribute(key, child[key]);
