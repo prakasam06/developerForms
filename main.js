@@ -64,15 +64,13 @@ const createPage = (obj, id) => {
   for (var key of Object.keys(obj)) {
     console.log(obj[key]);
     if (key == "container") {
-      var parentContainer = document.createElement(obj[key]);
-      console.log(parentContainer);
-      parentContainer.setAttribute("id", "parentContainer");
-      previewArea.appendChild(parentContainer);
+      var element = createElement(obj[key], key);
+
+      element.setAttribute("id", `${Date.now() + obj[key]}`);
+      previewArea.appendChild(element);
     }
     if (key == "tagName") {
-      var element = document.createElement(obj[key]);
-      element.setAttribute("id", `${obj[key] + key}`);
-      console.log(element.id);
+      element = createElement(obj[key]);
       const data = id;
       console.log(data);
       const contain = document.getElementById(data);
@@ -85,7 +83,8 @@ const createPage = (obj, id) => {
     }
 
     if (key == "children") {
-      createChildren(obj[key], id);
+      console.log(element.id);
+      createChildren(obj[key], element.id);
     }
   }
 };
@@ -97,8 +96,8 @@ const createChildren = (obj, id) => {
       if (key == "tagName") {
         var childContainer = document.createElement(object[key]);
         childContainer.setAttribute("id", "childContainer");
-        // childContainer.setAttribute("id", Date.now());
-        parentContainer.appendChild(childContainer);
+        var container = document.getElementById(id);
+        container.appendChild(childContainer);
       }
       if (key == "content") {
         childContainer.innerHTML = child[key];
@@ -149,11 +148,6 @@ function deleteChilds(divName) {
   }
 }
 
-function createElement(tagName) {
-  const element = document.createElement(tagName);
-  previewArea.appendChild(element);
-}
-
 function addContent() {
   element.innerHTML = key;
 }
@@ -171,4 +165,11 @@ function addContent() {
 
 const create = (o) => {
   console.log(o);
+};
+
+const createElement = (tagName, key) => {
+  var element = document.createElement(tagName);
+  element.setAttribute("id", `${tagName + key}`);
+  console.log(element);
+  return element;
 };
