@@ -71,6 +71,7 @@ const createPage = (obj, id) => {
     }
     if (key == "tagName") {
       element = createElement(obj[key]);
+
       const data = id;
       console.log(data);
       const contain = document.getElementById(data);
@@ -85,6 +86,9 @@ const createPage = (obj, id) => {
     if (key == "children") {
       console.log(element.id);
       createChildren(obj[key], element.id);
+    } else {
+      console.log(key, obj[key]);
+      element.setAttribute(key, obj[key]);
     }
   }
 };
@@ -95,12 +99,12 @@ const createChildren = (obj, id) => {
     for (var key of Object.keys(object)) {
       if (key == "tagName") {
         var childContainer = document.createElement(object[key]);
-        childContainer.setAttribute("id", "childContainer");
+        childContainer.setAttribute("id", `${object[key] + Date.now()}`);
         var container = document.getElementById(id);
         container.appendChild(childContainer);
       }
       if (key == "content") {
-        childContainer.innerHTML = child[key];
+        childContainer.innerHTML = object[key];
       }
       if (key == "children") {
         object[key].forEach((child) => {
@@ -114,18 +118,21 @@ const createChildren = (obj, id) => {
             }
             if (key == "content") {
               element.innerHTML = child[key];
+            } else {
+              element.setAttribute(key, child[key]);
             }
+
             if (key == "children") {
               child[key].forEach((child) => {
                 console.log(child);
                 console.log(element.id);
                 createPage(child, element.id);
               });
-            } else {
-              element.setAttribute(key, child[key]);
             }
           }
         });
+      } else {
+        childContainer.setAttribute(key, object[key]);
       }
     }
   });
