@@ -1,8 +1,7 @@
-[
-  {
-    "container": "section",
-"class":"container-fluid form-control bg-info h-100 align-items-center d-flex flex-column justify-content-around",
-"defaultClasses": [
+[{
+"container":"section",
+"class":"container-fluid h-100",
+"defaultClasses":[
 {
 "input":"form-control",
 "label":"form"
@@ -10,181 +9,148 @@
 ],
 "children":[
 {
-    "tagName":"div",
-    "children":[
-"children": [
- {
-        "tagName": "div",
-"class":"container-fluid d-flex justify-content-between",
-        "children": [
-          {
-            "tagName": "h4",
-            "content": "my Forms",
-"class":"w-50"
-          },
-          {
-            "tagName": "ul",
-"class":"d-flex h-100 w-50 justify-content-around align-items-center",
-  "children":[
+"tagName":"nav",
+"class":"navbar justify-content-between w-100",
+"children":[
+{
+"tagName":"h3",
+"class":"w-25 align-items-center",
+"content":"helloForms"
+},
+{
+"tagName":"ul",
+"class":"w-25 d-flex justify-content-around align-items-center",
+"children":[
 {
 "tagName":"li",
-"content":"next"
-},{
+"content":"hello"
+},
+{
 "tagName":"li",
-"content":"next"
-},{
+"content":"hello"
+},
+{
 "tagName":"li",
-"content":"next"
-},{
-"tagName":"li",
-"content":"next"
+"content":"hello"
 }
-]
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "First Name"
-          },
-          {
-            "tagName": "input",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "middle Name"
-          },
-          {
-            "tagName": "input",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "Last Name"
-          },
-          {
-            "tagName": "input",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "Age"
-          },
-          {
-            "tagName": "input",
-            "type": "date"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "photo"
-          },
-          {
-            "tagName": "input",
-            "type": "file"
-          }
-        ]
-      },
- {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "First Name"
-          },
-          {
-            "tagName": "input",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "middle Name"
-          },
-          {
-            "tagName": "input",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "Last Name"
-          },
-          {
-            "tagName": "input",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "Age"
-          },
-          {
-            "tagName": "input",
-            "type": "date"
-          }
-        ]
-      },
-      {
-        "tagName": "div",
-"class":"container-sm",
-        "children": [
-          {
-            "tagName": "label",
-            "content": "photo"
-          },
-          {
-            "tagName": "input",
-            "type": "file"
-          }
-        ]
-      }
 ]
 }
 ]
-  }
+},
+{
+"tagName":"div",
+"class":"form-control w-100 h-75 d-flex flex-column align-items-center justify-content-around bg-secondary",
+"children":[
+{
+"tagName":"div",
+"class":"container-fluid",
+"children":[
+{
+"tagName":"label",
+"content":"firstName"
+},
+{
+"tagName":"input",
+"type":"text"
+}
 ]
+},
+{
+"tagName":"div",
+"class":"container-fluid",
+"children":[
+{
+"tagName":"label",
+"content":"firstName"
+},
+{
+"tagName":"input",
+"type":"text"
+}
+]
+},
+{
+"tagName":"div",
+"class":"container-fluid",
+"children":[
+{
+"tagName":"label",
+"content":"firstName"
+},
+{
+"tagName":"input",
+"type":"text"
+}
+]
+},
+{
+"tagName":"div",
+"class":"container-fluid",
+"children":[
+{
+"tagName":"label",
+"content":"firstName"
+},
+{
+"tagName":"input",
+"type":"text"
+}
+]
+},
+
+{
+"tagName":"div",
+"class":"container-fluid",
+"children":[
+{
+"tagName":"label",
+"content":"firstName"
+},
+{
+"tagName":"input",
+"type":"text"
+}
+]
+},
+{
+"tagName":"div",
+"class":"container-fluid",
+"children":[
+{
+"tagName":"label",
+"content":"firstName"
+},
+{
+"tagName":"input",
+"type":"text"
+}
+]
+},
+{
+"tagName":"div",
+"class":"container-fluid",
+"children":[
+{
+"tagName":"label",
+"content":"firstName"
+},
+{
+"tagName":"input",
+"type":"text"
+}
+]
+}
+]
+},{
+"tagName":"div",
+"class":"w-100 d-flex align-items-center justify-content-center m-5",
+"children":[
+{
+"tagName":"button",
+"class":"btn btn-primary",
+"content":"submit"
+}
+]
+}
+]
+}]
