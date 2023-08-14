@@ -146,6 +146,7 @@ convertJSON.addEventListener("click", () => {
 
   forms.forEach((form) => {
     createPage(form);
+    addDefaultstyles(form);
   });
 });
 
@@ -179,4 +180,17 @@ const createElement = (tagName, key) => {
   element.setAttribute("id", `${tagName + key}`);
   console.log(element);
   return element;
+};
+
+const addDefaultstyles = (obj) => {
+  obj.defaultClasses.forEach((o) => {
+    for (var key of Object.keys(o)) {
+      const elements = document.getElementsByTagName(key);
+      Array.from(elements).forEach((element) => {
+        console.log(element);
+        console.log(o[key]);
+        element.setAttribute("class", o[key]);
+      });
+    }
+  });
 };

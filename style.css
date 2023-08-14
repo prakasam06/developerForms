@@ -192,3 +192,7 @@ textarea::-webkit-scrollbar-thumb {
   background-color: rgb(30, 68, 151);
   outline: 1px solid slategrey;
 }
+
+#previewArea {
+  width: 100%;
+}

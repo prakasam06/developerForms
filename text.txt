@@ -1,0 +1,190 @@
+[
+  {
+    "container": "section",
+"class":"container-fluid form-control bg-info h-100 align-items-center d-flex flex-column justify-content-around",
+"defaultClasses": [
+{
+"input":"form-control",
+"label":"form"
+}
+],
+"children":[
+{
+    "tagName":"div",
+    "children":[
+"children": [
+ {
+        "tagName": "div",
+"class":"container-fluid d-flex justify-content-between",
+        "children": [
+          {
+            "tagName": "h4",
+            "content": "my Forms",
+"class":"w-50"
+          },
+          {
+            "tagName": "ul",
+"class":"d-flex h-100 w-50 justify-content-around align-items-center",
+  "children":[
+{
+"tagName":"li",
+"content":"next"
+},{
+"tagName":"li",
+"content":"next"
+},{
+"tagName":"li",
+"content":"next"
+},{
+"tagName":"li",
+"content":"next"
+}
+]
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "First Name"
+          },
+          {
+            "tagName": "input",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "middle Name"
+          },
+          {
+            "tagName": "input",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "Last Name"
+          },
+          {
+            "tagName": "input",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "Age"
+          },
+          {
+            "tagName": "input",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "photo"
+          },
+          {
+            "tagName": "input",
+            "type": "file"
+          }
+        ]
+      },
+ {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "First Name"
+          },
+          {
+            "tagName": "input",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "middle Name"
+          },
+          {
+            "tagName": "input",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "Last Name"
+          },
+          {
+            "tagName": "input",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "Age"
+          },
+          {
+            "tagName": "input",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "tagName": "div",
+"class":"container-sm",
+        "children": [
+          {
+            "tagName": "label",
+            "content": "photo"
+          },
+          {
+            "tagName": "input",
+            "type": "file"
+          }
+        ]
+      }
+]
+}
+]
+  }
+]
